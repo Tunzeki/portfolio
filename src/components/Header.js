@@ -33,7 +33,28 @@ const socials = [
 ];
 
 const Header = () => {
-  const handleClick = (anchor) => () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > scrollRef.current) {
+        document.getElementById("outerBox").style.transform = `translateY('-200px')`;
+        document.getElementById("outerBox").style.display = `none`;
+      } else if (window.scrollY < scrollRef.current) {
+        document.getElementById("outerBox").style.transform = "translateY(0)";
+        document.getElementById("outerBox").style.display = `block`;
+      }
+      scrollRef.current = window.scrollY;
+    }
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+
+  }, [scrollRef]);
+
+  function handleClick(anchor) {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -43,6 +64,7 @@ const Header = () => {
       });
     };
   }
+
 
     return (
       <Box
@@ -55,6 +77,8 @@ const Header = () => {
         transitionDuration=".3s"
         transitionTimingFunction="ease-in-out"
         backgroundColor="#18181b"
+        ref={scrollRef}
+        id="outerBox"
       >
         <Box color="white" maxWidth="1280px" margin="0 auto">
           <HStack
@@ -86,11 +110,11 @@ const Header = () => {
               <HStack spacing={8}>
                 {/* Add links to Projects and Contact me section */}
                 {/* Projects */}
-                <a href="#projects-section" onClick={() => handleClick('projects')}>
+                <a href="#projects" onClick={() => handleClick('projects')}>
                   Projects
                 </a>
                 {/* Contact me */}
-                <a href="#contactme-section" onClick={() => handleClick('contactme')}>
+                <a href="#contactme" onClick={() => handleClick('contactme')}>
                   Contact Me
                 </a>
               </HStack>
