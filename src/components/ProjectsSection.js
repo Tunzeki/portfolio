@@ -5,28 +5,25 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Expense Manager",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../images/photo1.jpg"),
+      "Expense Manager is a React application that helps employees of a company track their expenses over time. It is searchable in real-time and the data, displayed in a table, is sortable.",
+    getImageSrc: () => require("../images/expensemanagerScreenshot.png"),
+    link: "https://melodic-melba-c0c5a9.netlify.app/",
   },
   {
-    title: "React Infinite Scroll",
+    title: "Little Lemon",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "LittleLemon is a restaurant that serves culture-rich and delicious delicacies. You can view the menu and reserve a table for an unforgettable dining experience.",
+    getImageSrc: () => require("../images/littlelemonScreenshot.png"),
+    link: "https://tunzeki.pythonanywhere.com/",
   },
   {
-    title: "Photo Gallery",
+    title: "easyGo",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
-  },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "easyGo is a company that provides tourists in Ghana with the services they need to make their tour enjoyable and stress-free.",
+    getImageSrc: () => require("../images/easyGoScreenshot.png"),
+    link: "https://helpful-bombolone-42270f.netlify.app/",
   },
 ];
 
@@ -53,6 +50,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            link={project.link}
           />
         ))}
       </Box>
