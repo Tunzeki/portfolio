@@ -7,7 +7,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import "./../index.css";
 
 const socials = [
   {
@@ -67,61 +67,33 @@ const Header = () => {
 
 
     return (
-      <Box
-        position="fixed"
-        top={0}
-        left={0}
-        right={0}
-        translateY={0}
-        transitionProperty="transform"
-        transitionDuration=".3s"
-        transitionTimingFunction="ease-in-out"
-        backgroundColor="#18181b"
-        ref={scrollRef}
-        id="outerBox"
-      >
-        <Box color="white" maxWidth="1280px" margin="0 auto">
-          <HStack
-            px={16}
-            py={4}
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <nav>
-              {/* Add social media links based on the `socials` data */}            
-              <HStack>
-                {/* Email */}
-                <a href={socials[0].url}>
-                  <FontAwesomeIcon icon={socials[0].icon} size="2x" />
-                </a>
-                {/* GitHub */}
-                <a href={socials[1].url}>
-                  <FontAwesomeIcon icon={socials[1].icon} size="2x" />
-                </a>
-                {/* LinkedIn */}
-                <a href={socials[2].url}>
-                  <FontAwesomeIcon icon={socials[2].icon} size="2x" />
-                </a>
-              </HStack>
-            
+      <nav className="black flex space-evenly" ref={scrollRef}>
 
-            </nav>
-            <nav>
-              <HStack spacing={8}>
-                {/* Add links to Projects and Contact me section */}
-                {/* Projects */}
-                <a href="#projects" onClick={() => handleClick('projects')}>
-                  Projects
-                </a>
-                {/* Contact me */}
-                <a href="#contactme" onClick={() => handleClick('contactme')}>
-                  Contact Me
-                </a>
-              </HStack>
-            </nav>
-          </HStack>
-        </Box>
-      </Box>
+        {/* Add social media links based on the `socials` data */}
+        <div className="flex space-around w-50vw">
+          {/* Email */}
+          <a href={socials[0].url}>
+            <FontAwesomeIcon icon={socials[0].icon} size="2x" />
+          </a>
+          {/* GitHub */}
+          <a href={socials[1].url}>
+            <FontAwesomeIcon icon={socials[1].icon} size="2x" />
+          </a>
+          {/* LinkedIn */}
+          <a href={socials[2].url}>
+            <FontAwesomeIcon icon={socials[2].icon} size="2x" />
+          </a>
+        </div>
+        
+        {/* Projects */}
+        <a href="#projects" onClick={() => handleClick('projects')}>
+          Projects
+        </a>
+        {/* Contact me */}
+        <a href="#contactme" onClick={() => handleClick('contactme')}>
+          Contact Me
+        </a>
+      </nav>
     );
 };
   

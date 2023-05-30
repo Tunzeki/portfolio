@@ -15,3 +15,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.w-50vw {
+  width: 50vw;
+}
