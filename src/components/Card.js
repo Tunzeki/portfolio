@@ -13,7 +13,7 @@ const Card = ({ title, description, imageSrc, link }) => {
         <div style={{ backgroundColor: "white", borderRadius: "1%" }}>
           <img src={imageSrc} alt="Project" style={{ borderRadius: "1%" }} />
           <div className="bold" style={{ color: "#000", marginLeft: "10px" }}>{title}</div>
-          <div style={{ color: "gray", marginTop: "10px", marginLeft: "10px" }}>{description}</div>
+          <div className="text-size-80 ml-10 mr-10" style={{ color: "gray", }}>{description}</div>
           <a href={link} target="_blank" style={{ color: "black", margin: "10px 0 10px 10px" }}>
             See more <FontAwesomeIcon icon={faExternalLink} size="1x" />
           </a>
