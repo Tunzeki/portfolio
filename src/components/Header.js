@@ -67,7 +67,7 @@ const Header = () => {
 
 
     return (
-      <nav className="bg-black text-white flex space-evenly pt-3 pb-3" id="container" ref={scrollRef}>
+      <nav className="bg-black text-white flex space-evenly pt-10 pb-10" id="container" ref={scrollRef}>
 
         {/* Add social media links based on the `socials` data */}
         <div className="flex space-around w-50vw">
