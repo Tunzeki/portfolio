@@ -37,3 +37,36 @@ code {
 .w-50vw {
   width: 50vw;
 }
+
+.special-blue {
+  background-color: #2A4365;
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-size-200 {
+  font-size: 200%;
+}
+
+.text-size-180 {
+  font-size: 180%;
+}
+
+.text-size-160 {
+  font-size: 160%;
+}
