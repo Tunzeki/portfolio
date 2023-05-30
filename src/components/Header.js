@@ -38,16 +38,16 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > scrollRef.current) {
-        document.getElementById("outerBox").style.transform = `translateY('-200px')`;
-        document.getElementById("outerBox").style.display = `none`;
+        document.getElementById("container").style.transform = `translateY('-200px')`;
+        document.getElementById("container").style.display = `none`;
       } else if (window.scrollY < scrollRef.current) {
-        document.getElementById("outerBox").style.transform = "translateY(0)";
-        document.getElementById("outerBox").style.display = `block`;
+        document.getElementById("container").style.transform = "translateY(0)";
+        document.getElementById("container").style.display = `flex`;
       }
       scrollRef.current = window.scrollY;
     }
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -67,21 +67,21 @@ const Header = () => {
 
 
     return (
-      <nav className="black flex space-evenly" ref={scrollRef}>
+      <nav className="bg-black text-white flex space-evenly pt-3 pb-3" id="container" ref={scrollRef}>
 
         {/* Add social media links based on the `socials` data */}
         <div className="flex space-around w-50vw">
           {/* Email */}
           <a href={socials[0].url}>
-            <FontAwesomeIcon icon={socials[0].icon} size="2x" />
+            <FontAwesomeIcon icon={socials[0].icon} size="1x" />
           </a>
           {/* GitHub */}
           <a href={socials[1].url}>
-            <FontAwesomeIcon icon={socials[1].icon} size="2x" />
+            <FontAwesomeIcon icon={socials[1].icon} size="1x" />
           </a>
           {/* LinkedIn */}
           <a href={socials[2].url}>
-            <FontAwesomeIcon icon={socials[2].icon} size="2x" />
+            <FontAwesomeIcon icon={socials[2].icon} size="1x" />
           </a>
         </div>
         
