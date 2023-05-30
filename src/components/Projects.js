@@ -26,8 +26,8 @@ const projectsList = [
 
 const Projects = () => {
     return (
-        <div className="green-shade">
-            <div className="bold text-white text-size-140 text-center pt-10">
+      <div className="green-shade" id="projects-section">
+        <div className="bold text-white text-size-140 text-center pt-10">
             Featured Projects
           </div>
           <div

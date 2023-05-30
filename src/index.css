@@ -129,6 +129,9 @@ code {
   background-color: #14532d;
 }
 
+.purple-shade {
+  background-color: #512DA8;
+}
 @media screen and (min-width: 992px) {
 
   .grid {
