@@ -136,6 +136,11 @@ code {
 .purple-shade {
   background-color: #512DA8;
 }
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 992px) {
 
   .grid {
