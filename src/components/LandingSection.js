@@ -12,8 +12,13 @@ const bio4 = "Hire Me";
 // Use a combination of Avatar, Heading and VStack components.
 const LandingSection = () => {
 
+  const profileImage = {
+    getImageSrc: () => require("../images/github_profile_pic.png"),
+  }
+
   return (
     <div className="center special-blue text-center bold pt-20 pb-20">
+      <img src={profileImage.getImageSrc()} alt="Profile Photo" className="rounded-borders img-center" width="150" height="150" />
       <h1 className="text-size-140">{greeting}</h1>
       <h2 className="text-size-120">{bio1}</h2>
       <h3 className="text-size-100">{bio2}</h3>

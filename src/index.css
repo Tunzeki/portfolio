@@ -141,6 +141,14 @@ code {
   cursor: pointer;
 }
 
+.rounded-borders {
+  border-radius: 50%;
+}
+
+.img-center {
+  margin: auto;
+}
+
 @media screen and (min-width: 992px) {
 
   .grid {
